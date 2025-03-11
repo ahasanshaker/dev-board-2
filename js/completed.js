@@ -11,6 +11,7 @@ document.querySelectorAll('.btn-completed').forEach(button =>{
         const checkboxPraElement = document.getElementById('checkbox-pra');
         let checkboxPra = parseInt(checkboxPraElement.innerText);
         checkboxPraElement.innerText = checkboxPra + 1;
+        alert('board updated sucsessfully')
 
         this.disabled = true;
         this.style.backgroundColor = '#ccc'; 
@@ -31,4 +32,9 @@ document.querySelectorAll('.btn-completed').forEach(button =>{
 document.getElementById('clear-history').addEventListener('click', function () {
     const historyy  = document.getElementById('history');
     historyy.innerHTML = ''; 
+})
+
+document.getElementById('discover-section').addEventListener('click',function(){
+     
+     window.location.href='next.html';
 })
