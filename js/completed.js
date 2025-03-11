@@ -38,3 +38,30 @@ document.getElementById('discover-section').addEventListener('click',function(){
      
      window.location.href='next.html';
 })
+
+
+// Color-button
+const colors = ["#FFB6C1", "#FFDAB9", "#E6E6FA"]; 
+let colorIndex = 0; 
+
+document.getElementById("color-button").addEventListener("click", function () {
+    document.body.style.backgroundColor = colors[colorIndex];
+    
+    colorIndex++; 
+
+    if (colorIndex >= colors.length) {
+        colorIndex = 0; 
+    }
+});
+
+// New Date Button
+function updateDate() {
+    const today = new Date(); 
+    const formattedDate = today.toDateString(); // 
+
+    document.getElementById("box-date").innerText = formattedDate;
+}
+
+
+updateDate();
+
